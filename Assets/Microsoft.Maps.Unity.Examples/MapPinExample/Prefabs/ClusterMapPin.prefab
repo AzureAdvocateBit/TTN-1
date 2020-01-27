@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 114896553018143308}
   - component: {fileID: 114794147355131198}
   - component: {fileID: 114290005320365110}
+  - component: {fileID: 6684109258929500464}
   m_Layer: 0
   m_Name: ClusterMapPin
   m_TagString: Untagged
@@ -109,6 +110,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640888791a51286498b083b38ab9cc57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6684109258929500464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366522844636312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states: {fileID: 11400000, guid: 5eac1712038236e4b8ffdb3893804fe1, type: 2}
+  InputActionId: 0
+  isGlobal: 0
+  Dimensions: 1
+  dimensionIndex: 0
+  startDimensionIndex: 0
+  CanSelect: 1
+  CanDeselect: 1
+  VoiceCommand: Select
+  voiceRequiresFocus: 1
+  profiles:
+  - Target: {fileID: 1366522844636312}
+    Themes:
+    - {fileID: 11400000, guid: 210ecfb82b9f09c4d835184cd0034155, type: 2}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114428088395238446}
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: I am clicked
+          m_BoolArgument: 0
+        m_CallState: 2
+  Events: []
+  enabledOnStart: 1
 --- !u!1 &1427262201316610
 GameObject:
   m_ObjectHideFlags: 0

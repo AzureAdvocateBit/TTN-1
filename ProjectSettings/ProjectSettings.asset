@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: The Things Network
+  productName: PinMap
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -676,7 +676,7 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
-  metroCertificateNotAfter: 00c249ff6c5ad601
+  metroCertificateNotAfter: 00327d988ef1d601
   metroApplicationDescription: Template_3D
   wsaImages:
     2031816: Assets/Microsoft.Maps.Unity.Examples/Icon_88x88.png
@@ -737,7 +737,7 @@ PlayerSettings:
     Holographic: True
     IoT: False
     IoTHeadless: False
-    Mobile: True
+    Mobile: False
     Team: False
     Xbox: False
   metroFTAName: 

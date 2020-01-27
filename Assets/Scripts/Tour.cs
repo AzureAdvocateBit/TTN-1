@@ -6,23 +6,27 @@ using Microsoft.Maps.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// When enabled, begins an animation through different MapScenes of Seattle.
 /// </summary>
 public class Tour : MonoBehaviour
 {
-    public string city;
-    public string landmark;
+    public TextMeshPro city;
+    public TextMeshPro landmark;
+    // private TextMeshPro landmarksText;
     private static readonly List<MapScene> MapScenes =
         new List<MapScene>
         {
             // Space Needle -> zoom out to Seattle Center
             new MapSceneOfLocationAndZoomLevel(new LatLon(52.617704345755548, 6.040935090374615), 17.0f),
             // MOHAI/wooden boats
-            new MapSceneOfLocationAndZoomLevel(new LatLon(52.617461065958473, 6.050445623657053), 17.0f)
-            // // Space Needle -> zoom out to Seattle Center
-            // new MapSceneOfLocationAndZoomLevel(new LatLon(47.620365, -122.349305), 17.0f),
+            new MapSceneOfLocationAndZoomLevel(new LatLon(37.2779714028801, -121.219809007815), 17.0f)
+            // // 1 Market Street
+            // new MapSceneOfLocationAndZoomLevel(new LatLon(37.793750, -122.395150), 17.0f),
+            // Ferry biilding 
+            // new MapSceneOfLocationAndZoomLevel(new LatLon(37.861700, -122.407440), 19.0f),
             // // MOHAI/wooden boats
             // new MapSceneOfLocationAndZoomLevel(new LatLon(47.626872, -122.336026), 17.0f),
             // new MapSceneOfLocationAndZoomLevel(new LatLon(47.627584, -122.336609), 18.0f),
@@ -65,6 +69,11 @@ public class Tour : MonoBehaviour
 
     void Start()
     {
+        // landmarksText = gameObject.GetComponent<TextMeshPro>();
+        city = GameObject.FindWithTag("City").GetComponent<TextMeshPro>();
+        string cityText = city.textInfo.textComponent.text;
+        landmark = GameObject.FindWithTag("Landmark").GetComponent<TextMeshPro>();
+        Debug.Log("CITY " + cityText);
         StartCoroutine(RunTour());
     }
 
@@ -76,10 +85,17 @@ public class Tour : MonoBehaviour
         {
             foreach (var scene in MapScenes)
             {
-                yield return _map.SetMapScene(scene);
+                // yield return _map.SetMapScene(scene);
+                SetLandmark();
 
-                yield return new WaitForSeconds(3.0f);
+                yield return new WaitForSeconds(10.0f);
             }
         }
+    }
+
+    private void SetLandmark() {
+        city.text = "San Francisco";
+        landmark.text = "Golden Gate Bridge";
+
     }
 }
