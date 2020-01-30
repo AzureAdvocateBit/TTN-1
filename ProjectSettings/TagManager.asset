@@ -6,6 +6,7 @@ TagManager:
   tags:
   - City
   - Landmark
+  - Map
   layers:
   - Default
   - TransparentFX

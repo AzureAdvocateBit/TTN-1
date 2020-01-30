@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 114898586744110094}
   - component: {fileID: 114896553018143308}
   - component: {fileID: 114794147355131198}
-  - component: {fileID: 114290005320365110}
-  - component: {fileID: 6684109258929500464}
+  - component: {fileID: 8266602653907684513}
+  - component: {fileID: 908076708109763614}
   m_Layer: 0
   m_Name: ClusterMapPin
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3c17acaaa42864793bde0dd12e0229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114290005320365110
+--- !u!114 &8266602653907684513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,10 +107,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366522844636312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 640888791a51286498b083b38ab9cc57, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e3ba42788f12af4db968c3e27bac5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6684109258929500464
+--- !u!114 &908076708109763614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,39 +119,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366522844636312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Script: {fileID: 11500000, guid: b7e736ec19b1c5543a9bb27c150f94fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: {fileID: 11400000, guid: 5eac1712038236e4b8ffdb3893804fe1, type: 2}
-  InputActionId: 0
-  isGlobal: 0
-  Dimensions: 1
-  dimensionIndex: 0
-  startDimensionIndex: 0
-  CanSelect: 1
-  CanDeselect: 1
-  VoiceCommand: Select
-  voiceRequiresFocus: 1
-  profiles:
-  - Target: {fileID: 1366522844636312}
-    Themes:
-    - {fileID: 11400000, guid: 210ecfb82b9f09c4d835184cd0034155, type: 2}
-  OnClick:
+  isFocusRequired: 1
+  MarkEventsAsUsed: 0
+  OnPointerDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114428088395238446}
-        m_MethodName: SetText
-        m_Mode: 5
+      - m_Target: {fileID: 8266602653907684513}
+        m_MethodName: Zoom
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: I am clicked
+          m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-  Events: []
-  enabledOnStart: 1
+        m_CallState: 1
+  OnPointerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerClicked:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerDragged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1427262201316610
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +472,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114290005320365110}
+      - m_Target: {fileID: 0}
         m_MethodName: Zoom
         m_Mode: 1
         m_Arguments:

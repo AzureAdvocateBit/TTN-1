@@ -23,6 +23,7 @@ public class ZoomToClusterMapPin : MonoBehaviour
 
     public void Zoom()
     {
+        Debug.Log("XXXX" + _clusterMapPin.Location + _map.ZoomLevel);
         var mapScene = new MapSceneOfLocationAndZoomLevel(_clusterMapPin.Location, _map.ZoomLevel + 1.01f);
         _map.SetMapScene(mapScene);
     }

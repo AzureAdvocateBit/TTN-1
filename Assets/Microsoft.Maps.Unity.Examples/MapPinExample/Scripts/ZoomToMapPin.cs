@@ -15,14 +15,16 @@ public class ZoomToMapPin : MonoBehaviour
 
     void Start()
     {
-        _map = GameObject.Find("Map").GetComponent<MapRenderer>();
+        _map = GameObject.FindWithTag("Map").GetComponent<MapRenderer>();
         Debug.Assert(_map != null);
+        Debug.Log("LoCATOn" + _map.ZoomLevel.ToString());
         _mapPin = GetComponent<MapPin>();
         Debug.Assert(_mapPin != null);
     }
-
-    public void Zoom()
-    {
+    
+     public void Zoom()
+    { 
+        Debug.Log("LoCATOn" + _mapPin.Location + " and " + _map.ZoomLevel);
         var mapScene = new MapSceneOfLocationAndZoomLevel(_mapPin.Location, _map.ZoomLevel + 1.01f);
         _map.SetMapScene(mapScene);
     }
