@@ -2,6 +2,8 @@
 
 The Things Network 2020 Conference [HoloLens 2]() Demo repository.
 
+[![HoloLens 2 Unity Bings Map SDK Example](https://img.youtube.com/vi/c9hdZA8Oag0/0.jpg)](https://www.youtube.com/watch?v=c9hdZA8Oag0)
+
 ## Technology
 
 * [HoloLens 2](https://docs.microsoft.com/windows/mixed-reality/news?WT.mc_id=thethingsnetwork-github-ayyonet#introducing-hololens-2)
