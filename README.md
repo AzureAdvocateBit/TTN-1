@@ -1,5 +1,7 @@
 # TheThingsNetwork 
 
+## Note: For an updated version of the demo, check out [HoloLens Data Visualization Repo](https://github.com/Yonet/HoloLensDataVisualization)
+
 The Things Network 2020 Conference [HoloLens 2]() Demo repository.
 
 [![HoloLens 2 Unity Bings Map SDK Example](https://img.youtube.com/vi/c9hdZA8Oag0/0.jpg)](https://www.youtube.com/watch?v=c9hdZA8Oag0)
